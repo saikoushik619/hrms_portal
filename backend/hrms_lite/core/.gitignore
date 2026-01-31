@@ -1,29 +1,23 @@
-# Ignore virtual environment
+# Virtual environments (never commit these!)
 myenv/
 venv/
-.env/
+env/
+.env
+*.sqlite3
+
+# Python cache
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# Frontend junk
+# Frontend
 frontend/node_modules/
 frontend/dist/
 frontend/.vite/
 frontend/.env*
 
-# Django junk
-*.sqlite3
-backend/staticfiles/
-backend/media/
-backend/logs/
-
-# Windows junk
-Thumbs.db
+# General
 .DS_Store
+Thumbs.db
 *.log
-
-# Editor junk
-.vscode/
-.idea/
