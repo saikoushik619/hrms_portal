@@ -36,8 +36,8 @@ https://sai619.pythonanywhere.com/admin/
 - Django REST Framework
 
 ### Database
-- SQLite (Local development)
-- PostgreSQL (Production)
+- SQLite
+  
 
 ### Deployment
 - Frontend: Vercel
