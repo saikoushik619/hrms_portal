@@ -1,55 +1,102 @@
-# HRMS Lite - Employee & Attendance Management System
+# HRMS Lite – Full Stack Coding Assignment
 
 ## Project Overview
-A lightweight, clean, and professional web app for managing employee records and daily attendance. Built for a single admin (no auth required) as per assignment. Focuses on core features: add/list/delete employees, mark/view attendance per employee, with validations, error handling, and bonus total present days.
+HRMS Lite is a lightweight Human Resource Management System designed as part of a full-stack coding assignment.  
+The application allows an admin to manage employee records and track daily attendance through a clean, professional web interface.
 
-**Live Application URL:** https://your-vercel-frontend-url.vercel.app (update after deploy)  
-**Live Backend API:** https://your-railway-backend.up.railway.app/api (update after deploy)  
-**GitHub Repository:** https://github.com/yourusername/hrms-lite
+The goal of this project is to demonstrate end-to-end full-stack development skills including frontend development, backend API design, database persistence, validations, error handling, and deployment readiness.
 
-## Tech Stack
-- Frontend: React (Vite), React Bootstrap, SweetAlert2, Lucide React icons, Axios
-- Backend: Django 4.2, Django REST Framework
-- Database: PostgreSQL
-- Deployment: Vercel (frontend), Railway (backend)
+---
 
-## Steps to Run Locally
+## Live Application URLs
 
-### Prerequisites
-- Python 3.10+
-- Node.js 18+
-- PostgreSQL installed (local)
+### Frontend (Live)
+https://hrms-portal-topaz.vercel.app
 
-### Backend
-1. `cd backend`
-2. `python -m venv venv`
-3. `venv\Scripts\activate` (Windows) or `source venv/bin/activate` (Linux/Mac)
-4. `pip install -r requirements.txt`
-5. `python manage.py migrate`
-6. `python manage.py runserver`
+### Backend API (Live)
+https://sai619.pythonanywhere.com
 
-API at http://127.0.0.1:8000/api/
+### Admin Panel
+https://sai619.pythonanywhere.com/admin/
+
+---
+
+## Tech Stack Used
 
 ### Frontend
-1. `cd frontend`
-2. `npm install`
-3. `npm run dev`
+- React (Vite)
+- JavaScript
+- Axios
+- React Bootstrap
+- SweetAlert2
 
-Open http://localhost:5173
+### Backend
+- Python
+- Django
+- Django REST Framework
 
-### Full Run
-- Start backend first
-- Start frontend
-- Open browser → use the app
+### Database
+- SQLite (Local development)
+- PostgreSQL (Production)
 
-## Assumptions & Limitations
-- No authentication (explicit assignment constraint: "single admin user (no authentication required)")
-- All endpoints/UI open to public (demo only)
-- Attendance marking restricted to today/past dates (future blocked for realism)
-- No employee/attendance edit (out of scope)
-- No advanced filtering/dashboard (bonus total present days implemented)
+### Deployment
+- Frontend: Vercel
+- Backend: PythonAnywhere
 
-## Bonus Implemented
-- Display total present days per employee in Attendance view
+---
 
-Thanks for reviewing! 🚀
+## Core Features Implemented
+
+### Employee Management
+- Add a new employee with:
+  - Employee ID (unique)
+  - Full Name
+  - Email Address
+  - Department
+- View list of all employees
+- Delete an employee
+
+### Attendance Management
+- Mark attendance for employees
+  - Date
+  - Status (Present / Absent)
+- View attendance records per employee
+
+---
+
+## Backend Validations & Error Handling
+- Required field validation
+- Email format validation
+- Duplicate employee ID handling
+- Proper HTTP status codes
+- Meaningful error messages returned to frontend
+
+---
+
+## Steps to Run the Project Locally
+
+### Backend Setup
+```bash
+cd backend/hrms_lite
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+
+
+
+## frontend setup
+
+cd frontend
+npm install
+npm run dev
+
+## frontend environment variables
+VITE_API_BASE_URL=https://sai619.pythonanywhere.com
+
+
+# github repository
+
+https://github.com/saikoushik619/hrms_portal
