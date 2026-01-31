@@ -2,4 +2,4 @@
 builder = "python"
 
 [deploy]
-startCommand = "gunicorn hrms_lite.wsgi:application"
+startCommand = "gunicorn hrms_lite.hrms_lite.wsgi:application"
