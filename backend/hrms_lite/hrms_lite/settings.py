@@ -78,14 +78,21 @@ CORS_ALLOW_ALL_ORIGINS = True
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'hrms_lite',          # your DB name
+#         'USER': 'postgres',           # default superuser
+#         'PASSWORD': '61945',  # ← the one you set in installer (e.g. 'postgres' or '1234')
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hrms_lite',          # your DB name
-        'USER': 'postgres',           # default superuser
-        'PASSWORD': '61945',  # ← the one you set in installer (e.g. 'postgres' or '1234')
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
